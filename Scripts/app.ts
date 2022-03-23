@@ -456,6 +456,8 @@
                     // hide any error message
                     messageArea.removeAttr("class").hide();
 
+                    AddNewNavbar();
+
                     // redirect the user to the secure area of our site - contact-list.html
                     LoadLink("contact-list");
                 }

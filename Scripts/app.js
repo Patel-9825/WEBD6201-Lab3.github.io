@@ -250,6 +250,7 @@
                 if (success) {
                     sessionStorage.setItem("user", newUser.serialize());
                     messageArea.removeAttr("class").hide();
+                    AddNewNavbar();
                     LoadLink("contact-list");
                 }
                 else {
