@@ -5,7 +5,8 @@
     function AuthGuard(): void
     {
         let protected_routes: string[] = [
-            "contact-list"
+            "contact-list",
+            "task-list"
         ];
     
     
@@ -490,6 +491,15 @@
 
     }
 
+    function AddNewNavbar()
+    {
+        $("ul").append(`<li class="nav-item">
+        <a class="nav-link" data="task-list"><i class="fas fa fa-tasks"></i> Task List</a>
+        </li>`);
+
+        AddNavigationEvents();
+    }
+
     /**
      * This function adds a new Task to the TaskList
      */
@@ -601,6 +611,7 @@
             case "login": return DisplayLoginPage;
             case "register": return DisplayRegisterPage;
             case "404": return Display404Page;
+            case "task-list": return DisplayTaskList;
             default:
                 console.error("ERROR: callback does not exist: " + router.ActiveLink);
                 return new Function();
