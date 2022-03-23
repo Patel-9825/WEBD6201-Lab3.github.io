@@ -2,8 +2,7 @@
 ((function()
 {
     let protected_routes: string[] = [
-        "contact-list",
-        "task-list"
+        "contact-list"
     ];
 
 
